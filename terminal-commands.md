@@ -1,3 +1,5 @@
+# Common Terminal Commands
+
 ## Key Commands & Navigation
 
 Before we look at some common commands, I just want to note a few keyboard commands that are very helpful:
