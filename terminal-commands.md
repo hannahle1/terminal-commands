@@ -28,12 +28,20 @@ Unfortunately, if you are on Windows and using Git Bash, the `man` command is no
 
 You should be able to use the arrow keys or page up and down. When you are ready to exit, just press `q`.
 
-## `whoami`
+## The `whoami` Command
 
 The `whoami` command will show you the current user that you are logged in as.
 
 ```bash
   whoami
+```
+
+## The `date` Command
+
+Another really simple one is the `date` command, which, surprise, will show you the current date and time.
+
+```bash
+  date
 ```
 
 ## File System Navigation
@@ -133,6 +141,16 @@ You can use it to show line numbers:
 
 There are other uses as well, but as you can see, the `cat` command is very powerful.
 
+## The `less` Command
+
+The `less` command is used to view the contents of a file. It is similar to the `cat` command, but it allows you to scroll up and down.
+
+```bash
+  less [filename]
+```
+
+To exit the `less` command, just press `q`.
+
 ## The `echo` Command
 
 The `echo` command is used to display messages, or to create and write to files. It is similar to the `cat` command, but it is used to display a single line of text.
@@ -154,6 +172,7 @@ You can also append to a file:
 ```
 
 ## The `nano` Command
+
 The `nano` command is a text editor that is installed by default on most Linux distributions, MacOS and you can even use it with Git Bash on Windows. It is very similar to the `vim` editor, but it is much easier to use.
 
 You can open an existing file to edit or create a new file and open it with:
@@ -163,7 +182,6 @@ You can open an existing file to edit or create a new file and open it with:
 ```
 
 When you're ready to exit, just hit `Ctrl + X` and then `Y` to save and `N` to not save.
-
 
 ## The `head` and `tail` Commands
 
@@ -309,3 +327,55 @@ We can remove all of the files that we created with this command:
 ```
 
 There is so much more that you can do with the `find` command, but it goes beyond the scope of this tutorial.
+
+## The `df` Command
+
+The `df` command is used to display the amount of disk space that is available on the file system.
+
+```bash
+  df
+```
+
+## The `du` Command
+
+The `du` command is used to estimate the file space usage for a file or directory.
+
+To see for the current directory:
+
+```bash
+  du
+```
+
+To make it human readable:
+
+```bash
+  du -h
+```
+
+To see for a specific file or directory:
+
+```bash
+  du -h [dirname]
+```
+
+To see for all files and directories in the current directory:
+
+```bash
+  du -a
+```
+
+## The `history` Command
+
+Used to display the history of commands that you have run.
+
+```bash
+  history
+```
+
+You can also use the `!` to run a command from the history.
+
+```bash
+  !100
+```
+
+This will run the command that is in the 100th position in the history.
