@@ -101,6 +101,16 @@ We can also do multiple commands at once with the `&&` operator:
 cd test2 && mkdir test3
 ```
 
+## Right angle bracket >
+
+This symbol tells the system to output results into whatever you specify next. The target is usually a filename. You can use this symbol by itself to create a new file:
+
+```bash
+> [filename]
+```
+
+When you are done, hit `ctrl+D`
+
 ## The `cat` (concatenate) Command
 
 The cat command is a very common command and allows you to create single or multiple files, view content of a file, concatenate files and redirect output in terminal or files.
