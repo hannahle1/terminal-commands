@@ -235,50 +235,6 @@ You can also search for a string in multiple files:
 
 There are a lot more things that you can do with the `grep` command, but it's a but more advanced.
 
-## Creating a Symlink
-
-A symlink is a special type of file that points to another file. It is a shortcut to the original file. It is useful when you want to access a file in a different location without having to copy it.
-
-We can use the `ln` command to create a symlink:
-
-```bash
-  ln -s [filename] [symlinkname]
-```
-
-You can remove a symlink with the `rm` command:
-
-```bash
-  rm [symlinkname]
-```
-
-If you're on Windows and you are not using something like Git Bash, you can use the `mklink` command:
-
-```bash
-  mklink [symlinkname] [filename]
-```
-
-## File Compression
-
-`tar` is a program for concatenating multiple files into one big file called a **tarball** and reversing this process by extracting the files from the tarball.
-
-| Command                             | Description                |
-| ----------------------------------- | -------------------------- |
-| tar czvf [dirname].tar.gz [dirname] | Create tarball             |
-| tar tzvf [dirname]                  | See what is in the tarball |
-| tar xzvf [dirname].tar.gz           | Extract tarball            |
-
-- -c : Creates Archive 
-- -x : Extract the archive 
-- -f : creates archive with given filename 
-- -t : displays or lists files in archived file 
-- -u : archives and adds to an existing archive file 
-- -v : Displays Verbose Information 
-- -A : Concatenates the archive files 
-- -z : zip, tells tar command that creates tar file using gzip 
-- -j : filter archive tar file using tbzip 
-- -W : Verify a archive file 
-- -r : update or add file or directory in already existed .tar file 
-
 ## The `find` command
 
 The `find` command is extremely powerful and is used to find the location of files and directories based on conditions that you specify.
@@ -349,6 +305,71 @@ We can remove all of the files that we created with this command:
 ```
 
 There is so much more that you can do with the `find` command, but it goes beyond the scope of this tutorial.
+
+## Piping
+Piping is very powerful. It is a way of redirecting standard output to another destination, such as another file. Let's actually use the find command to find a list of files and then pipe them to a new file.
+
+First, we'll create 10 files:
+
+```bash
+touch file-{001..010}.txt
+```
+
+Now, let's pipe the result from our find into a new file named `output.txt`
+
+```bash
+find . -name "file-0*" > output.txt
+```
+
+You can see the results now in the new file:
+
+```bash
+cat output.txt
+```
+
+## Creating a Symlink
+
+A symlink is a special type of file that points to another file. It is a shortcut to the original file. It is useful when you want to access a file in a different location without having to copy it.
+
+We can use the `ln` command to create a symlink:
+
+```bash
+  ln -s [filename] [symlinkname]
+```
+
+You can remove a symlink with the `rm` command:
+
+```bash
+  rm [symlinkname]
+```
+
+If you're on Windows and you are not using something like Git Bash, you can use the `mklink` command:
+
+```bash
+  mklink [symlinkname] [filename]
+```
+
+## File Compression
+
+`tar` is a program for concatenating multiple files into one big file called a **tarball** and reversing this process by extracting the files from the tarball.
+
+| Command                             | Description                |
+| ----------------------------------- | -------------------------- |
+| tar czvf [dirname].tar.gz [dirname] | Create tarball             |
+| tar tzvf [dirname]                  | See what is in the tarball |
+| tar xzvf [dirname].tar.gz           | Extract tarball            |
+
+- -c : Creates Archive 
+- -x : Extract the archive 
+- -f : creates archive with given filename 
+- -t : displays or lists files in archived file 
+- -u : archives and adds to an existing archive file 
+- -v : Displays Verbose Information 
+- -A : Concatenates the archive files 
+- -z : zip, tells tar command that creates tar file using gzip 
+- -j : filter archive tar file using tbzip 
+- -W : Verify a archive file 
+- -r : update or add file or directory in already existed .tar file 
 
 ## The `df` Command
 
