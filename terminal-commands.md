@@ -371,42 +371,6 @@ If you're on Windows and you are not using something like Git Bash, you can use 
 - -W : Verify a archive file 
 - -r : update or add file or directory in already existed .tar file 
 
-## The `df` Command
-
-The `df` command is used to display the amount of disk space that is available on the file system.
-
-```bash
-  df
-```
-
-## The `du` Command
-
-The `du` command is used to estimate the file space usage for a file or directory.
-
-To see for the current directory:
-
-```bash
-  du
-```
-
-To make it human readable:
-
-```bash
-  du -h
-```
-
-To see for a specific file or directory:
-
-```bash
-  du -h [dirname]
-```
-
-To see for all files and directories in the current directory:
-
-```bash
-  du -a
-```
-
 ## The `history` Command
 
 Used to display the history of commands that you have run.
