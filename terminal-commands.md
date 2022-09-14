@@ -267,6 +267,18 @@ If you're on Windows and you are not using something like Git Bash, you can use 
 | tar tzvf [dirname]                  | See what is in the tarball |
 | tar xzvf [dirname].tar.gz           | Extract tarball            |
 
+- -c : Creates Archive 
+- -x : Extract the archive 
+- -f : creates archive with given filename 
+- -t : displays or lists files in archived file 
+- -u : archives and adds to an existing archive file 
+- -v : Displays Verbose Information 
+- -A : Concatenates the archive files 
+- -z : zip, tells tar command that creates tar file using gzip 
+- -j : filter archive tar file using tbzip 
+- -W : Verify a archive file 
+- -r : update or add file or directory in already existed .tar file 
+
 ## The `find` command
 
 The `find` command is extremely powerful and is used to find the location of files and directories based on conditions that you specify.
