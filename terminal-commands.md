@@ -1,4 +1,17 @@
 # Common Terminal Commands
+## -Why Learn The Command Line/Terminal?-
+
+-Greater Control
+-Speed & Efficiency
+-Access Remote Servers
+-Command Line Tools
+-Getting Hired
+
+## -**Terminal** vs **Command Line** vs **Shell**
+
+-**Terminal**: Tool that you use to type and execute commands. Used to be hardware, now we use "terminal emulator" software.
+-**Command Line**: The interface of the terminal. Windows often calls their terminal program the "command line". The 2 terms are used interchangeably.
+-**The Shell**: The program that the terminal runs. The "OS" of the terminal. Ie: Bash
 
 ## Key Commands & Navigation
 
@@ -7,7 +20,7 @@ Before we look at some common commands, I just want to note a few keyboard comma
 - `Up Arrow`: Will show your last command
 - `Down Arrow`: Will show your next command
 - `Tab`: Will auto-complete your command
-- `Ctrl + L`: Will clear the screen
+- `Ctrl + L` or `clear`: Will clear the screen
 - `Ctrl + C`: Will cancel a command
 - `Ctrl + R`: Will search for a command
 - `Ctrl + D`: Will exit the terminal
@@ -51,14 +64,14 @@ Commands to navigate your file system are very important. You will be using them
 | Command                             | Description                                                                       |
 | ----------------------------------- | --------------------------------------------------------------------------------- |
 | pwd                                 | Lists the path to the working directory                                           |
-| ls                                  | List directory contents                                                           |
+| ls                                  | List directory contents. To list contents of a directory: ie. ls Downloads or ls Downloads/                                                           |
 | ls -a                               | List contents including hidden files (Files that begin with a dot)                |
 | ls -l                               | List contents with more info including permissions (long listing)                 |
-| ls -r                               | List contents reverse order                                                       |
+| ls -r                               | List contents reverse order. We can also combine: ls-ra to show contents hidden from the bottom                                                   |
 | cd                                  | Change directory to home                                                          |
 | cd [dirname]                        | Change directory to specific directory                                            |
 | cd ~                                | Change to home directory                                                          |
-| cd ..                               | Change to parent directory                                                        |
+| cd ..                               | Change to parent directory. cd /: change to the root                                                        |
 | cd -                                | Change to previous directory (which could be different than the parent of course) |
 | find [dirtosearch] -name [filename] | Find location of a program                                                        |
 
@@ -89,11 +102,14 @@ You can open folders, files and even URLs
 | rm -r [dirname]             | Remove directory                                    |
 | rm -rf [dirname]            | Remove directory with contents                      |
 | rm ./\*                     | Remove everything in the current folder             |
-| cp [filename] [dirname]     | Copy file                                           |
+| cp [filename] [dirname]     | Copy <filename> to <dirname>                                           |
 | mv [filename] [dirname]     | Move file                                           |
 | mv [dirname] [dirname]      | Move directory                                      |
 | mv [filename] [filename]    | Rename file or folder                               |
 | mv [filename] [filename] -v | Rename Verbose - print source/destination directory |
+
+Move and rename at the same time:
+![alt text](image.png)
 
 We can also do multiple commands at once with the `&&` operator:
 
@@ -130,7 +146,7 @@ You can also view the contents of multiple files:
 You can also create a file using the `cat` command:
 
 ```bash
-  cat > [filename]
+  cat > [filename] or > [filename]
 ```
 
 This will open up a new file and you can start typing. When you are done, you can press `Ctrl + D` to save and exit.
@@ -148,6 +164,7 @@ You can use it to show line numbers:
 ```bash
   cat -n [filename]
 ```
+![alt text](image-1.png)
 
 There are other uses as well, but as you can see, the `cat` command is very powerful.
 
@@ -192,6 +209,8 @@ You can open an existing file to edit or create a new file and open it with:
 ```
 
 When you're ready to exit, just hit `Ctrl + X` and then `Y` to save and `N` to not save.
+
+Or `Ctrl + O` to save, then `Ctr + X` to exit.
 
 ## The `head` and `tail` Commands
 
