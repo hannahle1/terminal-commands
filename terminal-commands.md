@@ -246,6 +246,10 @@ The `grep` command is used to search for a text pattern in a file. It is very po
   grep [searchterm] [filename]
 ```
 
+Ie: 
+grep "line 22" info.txt
+grep "line *" info.txt
+
 You can also search for a string in multiple files:
 
 ```bash
@@ -277,6 +281,8 @@ Let's find the file called `file-001.txt`:
 ```bash
   find . -name "file-001.txt"
 ```
+
+Ie: If you're already in the directory -> find . -name "file-001.txt"
 
 This will look in the current directory, which is represented with a dot.
 
@@ -310,7 +316,7 @@ Let's append some text to the file `file-002.txt`. We could use the `cat` comman
   echo "Hello World" >> file-002.txt
 ```
 
-Now if we find the empty files again, we will see that `file-002.txt` is no longer empty:
+Now if we find the empty files again, we will see that `file-002.txt` is no longer empty and it doesn't show up:
 
 ```bash
   find . -empty
@@ -356,6 +362,9 @@ We can use the `ln` command to create a symlink:
   ln -s [filename] [symlinkname]
 ```
 
+![alt text](image.png)
+-> Didn't copy the entire thing over to the current folder but created a symlink. So the contents of dlds are still in the Downloads folder in home directory.
+
 You can remove a symlink with the `rm` command:
 
 ```bash
@@ -370,13 +379,18 @@ If you're on Windows and you are not using something like Git Bash, you can use 
 
 ## File Compression
 
-`tar` is a program for concatenating multiple files into one big file called a **tarball** and reversing this process by extracting the files from the tarball.
+`tar` is a program for concatenating multiple files into one big file called a **tarball** (= ZIP) and reversing this process by extracting the files from the tarball.
 
 | Command                             | Description                |
 | ----------------------------------- | -------------------------- |
 | tar czvf [dirname].tar.gz [dirname] | Create tarball             |
 | tar tzvf [dirname]                  | See what is in the tarball |
 | tar xzvf [dirname].tar.gz           | Extract tarball            |
+
+![alt text](image-2.png)
+
+![alt text](image-1.png)
+
 
 - -c : Creates Archive 
 - -x : Extract the archive 
