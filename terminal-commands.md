@@ -1,16 +1,23 @@
-# Common Terminal Commands
+# Common Terminal Commands  
+
 ## -Why Learn The Command Line/Terminal?-
 
--Greater Control
--Speed & Efficiency
--Access Remote Servers
--Command Line Tools
+-Greater Control  
+
+-Speed & Efficiency  
+
+-Access Remote Servers  
+
+-Command Line Tools  
+
 -Getting Hired
 
 ## -**Terminal** vs **Command Line** vs **Shell**
 
--**Terminal**: Tool that you use to type and execute commands. Used to be hardware, now we use "terminal emulator" software.
--**Command Line**: The interface of the terminal. Windows often calls their terminal program the "command line". The 2 terms are used interchangeably.
+-**Terminal**: Tool that you use to type and execute commands. Used to be hardware, now we use "terminal emulator" software.  
+
+-**Command Line**: The interface of the terminal. Windows often calls their terminal program the "command line". The 2 terms are used interchangeably.  
+
 -**The Shell**: The program that the terminal runs. The "OS" of the terminal. Ie: Bash
 
 ## Key Commands & Navigation
@@ -108,7 +115,8 @@ You can open folders, files and even URLs
 | mv [filename] [filename]    | Rename file or folder                               |
 | mv [filename] [filename] -v | Rename Verbose - print source/destination directory |
 
-Move and rename at the same time:
+Move and rename at the same time:  
+
 ![alt text](image.png)
 
 We can also do multiple commands at once with the `&&` operator:
